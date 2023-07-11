@@ -23,6 +23,10 @@ body {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(108deg) brightness(104%) contrast(104%);
 }
 
+.price-list p {
+    margin: 25px;
+}
+
 .nav a{
     margin: 0 10px;
     color: white;
@@ -85,10 +89,26 @@ body {
     color: white;
     display: flex;
     justify-content: center;
+    width: 100%;
+}
+
+.price {
+    width: 500px;
 }
 
 .all-plans {
     color: white;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin: 10px;
+    text-align: left;
 }
 
 .price-list {
@@ -99,3 +119,33 @@ body {
     align-items: center;
     margin: 10px;
 }
+
+.price-list:hover {
+    cursor: pointer;
+}
+
+.price-list:active {
+    border: 2px solid var(--darkpurple);
+    color: var(--darkpurple);
+}
+
+.first-price {
+    border: 2px solid var(--darkpurple);
+    color: var(--darkpurple);
+}
+
+.all-plans {
+    background-color: var(--gray);
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.get-started {
+    width: 270px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--lightpurple);
+    font-size: 1.1rem;
+}
+
