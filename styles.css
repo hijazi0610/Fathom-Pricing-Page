@@ -81,10 +81,21 @@ body {
     margin-top: -10px;
 }
 
-.price {
+.price-container {
     color: white;
+    display: flex;
+    justify-content: center;
 }
 
 .all-plans {
     color: white;
+}
+
+.price-list {
+    border: 2px solid var(--lightgray);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin: 10px;
 }
