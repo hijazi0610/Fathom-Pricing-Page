@@ -35,78 +35,78 @@
                 <p>Get the information you need about your website without compromising anyone’s digital privacy. Start with a <span style="background-color: #4E492F; padding: 5px; border-radius: 10px;">30-day free trial</span> of Fathom and then pay a fair and sustainable monthly price based on your average monthly page views.</p>
             </div>
             <div class="graph">
-                <img src="/Fathom-Pricing-Page/Graph.png" alt="complimentary-graph">
+                <img src="/Graph.png" alt="complimentary-graph">
             </div>
         </div>
         <div class="price-container">
             <div class="price">
-                <div class="price-overall">
+                <div class="price-overall-monthly">
                     <div class="price-list first-price">
-                        <h2>$14/m</h2>
+                        <h2 id="priceValue">$14/m</h2>
                         <p>Up to 100,000 monthly page views</p>
                         <i class="fa-regular fa-circle-check" style="color: #9580ff;"></i>
                         <i class="fa-regular fa-circle" style="color: #9580ff;"></i>
                     </div>
                     <div class="price-list">
-                        <h2>$24/m</h2>
+                        <h2 id="priceValue">$24/m</h2>
                         <p>Up to 200,000 monthly page views</p>
                         <i class="fa-regular fa-circle" style="color: #9580ff;"></i>
                         <i class="fa-regular fa-circle-check" style="color: #9580ff;"></i>
                     </div>
                     <div class="price-list">
-                        <h2>$44/m</h2>
+                        <h2 id="priceValue">$44/m</h2>
                         <p>Up to 500,000 monthly page views</p>
                         <i class="fa-regular fa-circle" style="color: #9580ff;"></i>
                         <i class="fa-regular fa-circle-check" style="color: #9580ff;"></i>
                     </div>
-                    <span class="more-price">
+                    <span class="more-price" id="morePrice" hidden>
                         <div class="price-list">
-                            <h2>$54/m</h2>
+                            <h2 id="priceValue">$54/m</h2>
                             <p>Up to 1,000,000 monthly page views</p>
                             <i class="fa-regular fa-circle" style="color: #9580ff;"></i>
                             <i class="fa-regular fa-circle-check" style="color: #9580ff;"></i>
                         </div>
                         <div class="price-list">
-                            <h2>$74/m</h2>
+                            <h2 id="priceValue">$74/m</h2>
                             <p>Up to 2,000,000 monthly page views</p>
                             <i class="fa-regular fa-circle" style="color: #9580ff;"></i>
                             <i class="fa-regular fa-circle-check" style="color: #9580ff;"></i>
                         </div>
                         <div class="price-list">
-                            <h2>$94/m</h2>
+                            <h2 id="priceValue">$94/m</h2>
                             <p>Up to 5,000,000 monthly page views</p>
                             <i class="fa-regular fa-circle" style="color: #9580ff;"></i>
                             <i class="fa-regular fa-circle-check" style="color: #9580ff;"></i>
                         </div>
                         <div class="price-list">
-                            <h2>$124/m</h2>
+                            <h2 id="priceValue">$124/m</h2>
                             <p>Up to 10,000,000 monthly page views</p>
                             <i class="fa-regular fa-circle" style="color: #9580ff;"></i>
                             <i class="fa-regular fa-circle-check" style="color: #9580ff;"></i>
                         </div>
                         <div class="price-list">
-                            <h2>$184/m</h2>
+                            <h2 id="priceValue">$184/m</h2>
                             <p>Up to 15,000,000 monthly page views</p>
                             <i class="fa-regular fa-circle" style="color: #9580ff;"></i>
                             <i class="fa-regular fa-circle-check" style="color: #9580ff;"></i>
                         </div>
                         <div class="price-list">
-                            <h2>$244/m</h2>
+                            <h2 id="priceValue">$244/m</h2>
                             <p>Up to 20,000,000 monthly page views</p>
                             <i class="fa-regular fa-circle" style="color: #9580ff;"></i>
                             <i class="fa-regular fa-circle-check" style="color: #9580ff;"></i>
                         </div>
                         <div class="price-list">
-                            <h2>$274/m</h2>
+                            <h2 id="priceValue">$274/m</h2>
                             <p>Up to 25,000,000 monthly page views</p>
                             <i class="fa-regular fa-circle" style="color: #9580ff;"></i>
                             <i class="fa-regular fa-circle-check" style="color: #9580ff;"></i>
                         </div>
-                    </span>
+                    </span>   
                 </div>
                 <div class="buttons">
-                    <button class="free-month">Get 2 months free (switch to yearly)</button>
-                    <button class="fewer-plan">Show fewer plans</button>
+                    <button class="free-month" onclick="showYearly()">Get 2 months free (switch to yearly)</button>
+                    <button class="more-plan" onclick="showMore()">Show more plans</button>
                 </div>
             </div>
             <div class="all-plans">
@@ -170,5 +170,6 @@
         <div class="demos"></div>
     </main>
     <footer class="footer"></footer>
+    <script src="main.js"></script>
 </body>
 </html>
