@@ -13,6 +13,26 @@ function showMore() {
     }   
 }
 
+// document.querySelector('.price-list').addEventListener('click', toggle);
+
+// function toggle(e) {
+//     const tgt = e.target.firstElementChild;
+//     tgt.classList.toggle('fa-circle-check');
+//     tgt.classList.toggle('fa-circle')
+// }
+
+const allPrice = document.querySelectorAll('.price-list');
+
+function toggle() {
+    const icon = this.querySelector('.fa-regular')
+    icon.classList.toggle('fa-circle-check');
+    icon.classList.toggle('fa-circle');
+}
+
+allPrice.forEach(price => {
+    price.addEventListener('click', toggle)
+})
+
 function showYearly() {
     // Get all the price elements
     const priceElements = document.querySelectorAll(".price-list h2");
