@@ -1,48 +1,49 @@
-const morePrice = document.querySelector('.more-price');
-const buttonText = document.querySelector('.more-plan');
-const monthly = document.querySelector('.price-overall-monthly');
+document.addEventListener('DOMContentLoaded', () => {
 
-function showMore() {
-    // morePrice.hidden = false;
-    morePrice.hidden = !morePrice.hidden;
+    const priceListItems = document.querySelectorAll('.plan-list-item')
 
-    if(morePrice.hidden) {
-        buttonText.innerHTML = 'Show more plans';
-    } else {
-        buttonText.innerHTML = 'Show less plans'
-    }   
-}
+    // Add click listener to price list items
+    priceListItems.forEach(plan => {
+        plan.addEventListener('click', () => handlePlanSelected(plan))
+    })
 
-// document.querySelector('.price-list').addEventListener('click', toggle);
+    // Removes selected-plan class from all items in price list
+    // Adds selected-plan class selected plan
+    function handlePlanSelected(plan) {
+        priceListItems.forEach(item => {
+            item.classList.remove('selected-plan');
+        });
 
-// function toggle(e) {
-//     const tgt = e.target.firstElementChild;
-//     tgt.classList.toggle('fa-circle-check');
-//     tgt.classList.toggle('fa-circle')
-// }
+        plan.classList.add('selected-plan')
+    }
 
-const allPrice = document.querySelectorAll('.price-list');
+    const toggleShowMoreBtn = document.querySelector('#toggle-show-more-btn');
+    const extendedPriceList = document.querySelector('#extended-plan-list');
 
-function toggle() {
-    const icon = this.querySelector('.fa-regular')
-    icon.classList.toggle('fa-circle-check');
-    icon.classList.toggle('fa-circle');
-}
+    toggleShowMoreBtn.addEventListener('click', () => toggleShowMorePlans());
 
-allPrice.forEach(price => {
-    price.addEventListener('click', toggle)
-})
+    function toggleShowMorePlans() {
+        extendedPriceList.hidden = !extendedPriceList.hidden;
+
+        if (extendedPriceList.hidden) {
+            toggleShowMoreBtn.innerHTML = 'Show more plans';
+        } else {
+            toggleShowMoreBtn.innerHTML = 'Show less plans';
+        }
+    }
+
+});
 
 function showYearly() {
     // Get all the price elements
-    const priceElements = document.querySelectorAll(".price-list h2");
+    const priceElements = document.querySelectorAll(".plan-list h2");
     const button = document.querySelector('.free-month');
-    
+
     // Loop through each price element
     priceElements.forEach(priceElement => {
         // Get the current price value
         let priceText = priceElement.textContent;
-        
+
         if (priceText.includes("/m")) {
             // Switch to yearly price
             priceText = priceText.replace("/m", "/y");
@@ -57,7 +58,7 @@ function showYearly() {
 
             button.textContent = 'Get 2 months free (switch to yearly)'
         }
-        
+
         // Update the price element with the new price
         priceElement.innerHTML = priceText;
     });

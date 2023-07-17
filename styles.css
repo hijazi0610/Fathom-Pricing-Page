@@ -24,11 +24,11 @@ body {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(108deg) brightness(104%) contrast(104%);
 }
 
-.price-list p {
+.plan-list-item p {
     margin: 25px;
 }
 
-.nav a{
+.nav a {
     margin: 0 10px;
     color: white;
     text-decoration: none;
@@ -83,7 +83,7 @@ body {
     color: white;
 }
 
-.info p{
+.info p {
     color: white;
     font-size: 1.1rem;
     line-height: 1.7rem;
@@ -109,14 +109,14 @@ ul {
     margin: 0;
     padding: 0;
 }
-    
+
 li {
     list-style: none;
     margin-bottom: 10px;
     text-align: left;
 }
 
-.price-list {
+.plan-list-item {
     border: 2px solid var(--gray);
     padding: 10px;
     border-radius: 10px;
@@ -125,17 +125,12 @@ li {
     margin: 10px;
 }
 
-.price-list:hover {
+.plan-list-item:hover {
     cursor: pointer;
     border: 2px solid white;
 }
 
-.price-list:active {
-    border: 2px solid var(--darkpurple);
-    color: var(--darkpurple);
-}
-
-.first-price {
+.plan-list-item:active {
     border: 2px solid var(--darkpurple);
     color: var(--darkpurple);
 }
@@ -175,7 +170,7 @@ li {
     color: white;
 }
 
-.more-plan {
+#toggle-show-more-btn {
     margin-left: 10px;
     padding: 10px;
     border-radius: 20px;
@@ -185,6 +180,24 @@ li {
     width: 140px;
 }
 
-.more-plan:hover {
+#toggle-show-more-btn:hover {
     cursor: pointer;
 }
+
+.plan-list-item .fa-circle-check {
+    display: none;
+}
+
+.plan-list-item.selected-plan {
+    border: 2px solid var(--darkpurple);
+    color: var(--darkpurple);
+}
+
+.plan-list-item.selected-plan .fa-circle-check {
+    display: inline-block;
+}
+
+.plan-list-item.selected-plan .fa-circle {
+    display: none;
+}
+
