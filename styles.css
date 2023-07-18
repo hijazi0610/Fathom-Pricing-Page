@@ -263,8 +263,17 @@ li {
     margin-bottom: -20px;
 }
 
-.faq-list-item {
+.questions h3 {
     line-height: 1.75;
+}
+
+.questions h3:hover {
+    cursor: pointer;
+}
+
+.faq-list-item p{
+    line-height: 1.75;
+    margin-top: 30px;
 }
 
 .faq-list-item .questions .fa-chevron-up {
@@ -277,10 +286,10 @@ li {
 
 .faq-list-item.selected-faq .questions {
     background-color: var(--gray);
-    margin: 5px 0px;
+    margin-top: 20px;
     padding: 0 10px;
     width: 690px;
-    border: 20px;
+    border-radius: 10px;
 }
 
 .faq-list-item.selected-faq .fa-chevron-down {

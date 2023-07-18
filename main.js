@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function handlePlanSelected(plan) {
         priceListItems.forEach(item => {
             item.classList.remove('selected-plan');
-        });
+        }); 
 
         plan.classList.add('selected-plan')
     }
