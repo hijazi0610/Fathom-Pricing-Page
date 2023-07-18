@@ -32,6 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    const faqList = document.querySelectorAll('.faq-list-item');
+
+    faqList.forEach(faq => {
+        faq.addEventListener('click', () => handleFaqSelected(faq))
+    })
+
+    function handleFaqSelected(faq) {
+        faqList.forEach(item => {
+            item.classList.remove('selected-faq');
+        })
+
+        faq.classList.add('selected-faq')
+    }
+
 });
 
 function showYearly() {

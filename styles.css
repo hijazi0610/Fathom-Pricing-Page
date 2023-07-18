@@ -146,12 +146,19 @@ li {
 
 .get-started {
     width: 350px;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
+    border: none;
     background-color: var(--lightpurple);
     font-size: 1.1rem;
-    margin-top: 20px;
+    margin-top: 10px;
 }
+
+.get-started:hover {
+    background-color: var(--darkpurple);
+    transition: 0.25s;
+}
+
 
 .free-month {
     background-color: var(--green);
@@ -201,3 +208,89 @@ li {
     display: none;
 }
 
+.pricing-disclaimer h5 {
+    color: var(--lightgray);
+    text-align: center;
+}
+
+.sites {
+    text-decoration: underline;
+}
+
+.sites:hover {
+    cursor: pointer;
+}
+
+.pageviews {
+    text-align: center;
+    margin-top: 80px;
+    color: white;
+}
+
+.pageviews button {
+    border-radius: 20px;
+    padding: 7px;
+    background: linear-gradient(90deg, #DE4C7D, #A756B8, #6669ED, #4D90E0);
+    color: white;
+    border: none;
+    font-size: 14px;
+}
+
+.companies {
+    text-align: center;
+    margin-top: 110px;
+    margin-bottom: 150px;
+}
+
+.companies h2 {
+    color: white;
+}
+
+.faq {
+    color: white;
+    width: 700px;
+    margin: auto;
+}
+
+.faq h2 {
+    font-size: 2.5rem;
+}
+
+.questions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -20px;
+}
+
+.faq-list-item {
+    line-height: 1.75;
+}
+
+.faq-list-item .questions .fa-chevron-up {
+    display: none;
+}
+
+.faq-list-item.selected-faq .fa-chevron-up {
+    display: inline-block;
+}
+
+.faq-list-item.selected-faq .questions {
+    background-color: var(--gray);
+    margin: 5px 0px;
+    padding: 0 10px;
+    width: 690px;
+    border: 20px;
+}
+
+.faq-list-item.selected-faq .fa-chevron-down {
+    display: none;
+}
+
+.faq-list-item.selected-faq p {
+    display: inline-block;
+}
+
+.faq-list-item p {
+    display: none;
+}
