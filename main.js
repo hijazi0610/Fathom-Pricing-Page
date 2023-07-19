@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function handlePlanSelected(plan) {
         priceListItems.forEach(item => {
             item.classList.remove('selected-plan');
-        }); 
+        });
 
-        plan.classList.add('selected-plan')
+        plan.classList.add('selected-plan');
     }
 
     const toggleShowMoreBtn = document.querySelector('#toggle-show-more-btn');
