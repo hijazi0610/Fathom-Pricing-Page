@@ -303,3 +303,54 @@ li {
 .faq-list-item p {
     display: none;
 }
+
+@media only screen and (max-width: 700px) {
+    .price-container {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        width: 100%;
+    }
+
+    .pricing-info {
+        margin-left: -10px;
+    }
+
+    .pricing-info .info h1{
+        font-size: 2.25rem;
+        text-align: center;
+    }
+
+    .pricing-info .info p{
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .info {
+        width: 400px;
+        margin-left: 0
+    }
+
+    .buttons {
+        text-align: center;
+    }
+
+    .price {
+        width: 450px;
+    }
+
+    .faq {
+        width: 400px;
+        text-align: justify;
+        /* margin-left: 30px; */
+    }
+
+    .faq h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .faq .faq-container .faq-list .faq-list-item .questions{
+        width: 400px;
+    }
+}
